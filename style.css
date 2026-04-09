@@ -694,3 +694,7 @@ td {
     margin-bottom: 1rem;
   }
 }
+
+.muted {
+  color: var(--muted);
+}
