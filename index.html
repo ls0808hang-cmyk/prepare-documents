@@ -1,14 +1,242 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="ko">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Hello World</title>
-  <link href='/style.css' rel='stylesheet'>
+  <title>서류준비도우미 | 행정 서류 준비 체크리스트와 제출 가이드</title>
+  <meta name="description" content="이사, 취업, 학교 제출, 출산/육아 등 상황별 행정 서류 체크리스트와 발급 가이드를 한곳에서 확인하세요. 초보자도 이해하기 쉽게 정리한 실용 정보 사이트입니다." />
+  <meta name="keywords" content="행정 서류, 제출 서류, 체크리스트, 이사 서류, 취업 서류, 학교 제출 서류, 출산 서류" />
+  <meta property="og:title" content="서류준비도우미 | 행정 서류 준비 체크리스트와 제출 가이드" />
+  <meta property="og:description" content="상황별 서류 준비를 쉽게 정리한 체크리스트와 발급 가이드." />
+  <meta property="og:type" content="website" />
+  <link rel="stylesheet" href="/style.css" />
+  <script defer src="/main.js"></script>
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"WebSite",
+    "name":"서류준비도우미",
+    "url":"https://example.com/",
+    "description":"행정 서류 준비 체크리스트와 제출 가이드를 제공하는 정보형 웹사이트"
+  }
+  </script>
 </head>
 <body>
-  <h1>Hello, world!</h1>
-  <button onclick="console.log('hello');">Press me</button>
-  <script defer type="text/javascript" src="/main.js"></script>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="/index.html">
+        <span class="logo-badge">문</span>
+        <span>서류준비도우미</span>
+      </a>
+
+      <nav class="main-nav" data-menu>
+        <a class="active" href="/index.html">홈</a>
+        <a href="/checklist/index.html">체크리스트</a>
+        <a href="/guides/index.html">가이드</a>
+        <a href="/faq/index.html">FAQ</a>
+        <a href="/about/index.html">About</a>
+        <a href="/contact/index.html">문의</a>
+      </nav>
+
+      <button class="menu-toggle" type="button" data-menu-toggle aria-expanded="false" aria-controls="site-menu" aria-label="메뉴 열기">메뉴</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-card">
+          <span class="eyebrow">상황별 행정 서류 준비를 쉽게</span>
+          <h1>이사, 취업, 학교 제출, 출산 서류까지<br />헷갈리지 않게 한 번에 정리하세요</h1>
+          <p>
+            서류준비도우미는 복잡한 행정 서류 준비 과정을 상황별 체크리스트와 설명형 가이드로 정리한 정보 사이트입니다.
+            단순히 항목만 나열하지 않고, 왜 필요한지, 언제 준비해야 하는지, 어디서 발급하는지까지 함께 안내합니다.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="/checklist/index.html">체크리스트 바로가기</a>
+            <a class="btn btn-secondary" href="/guides/index.html">발급 가이드 보기</a>
+          </div>
+        </div>
+
+        <div class="hero-side">
+          <div class="info-card">
+            <h3>이 사이트가 도움이 되는 순간</h3>
+            <ul class="check-bullets">
+              <li>이사 전후에 놓치기 쉬운 신고·발급 항목을 정리할 때</li>
+              <li>입사 전 제출 서류를 회사 안내문 없이 스스로 준비할 때</li>
+              <li>학교, 기관, 병원에 내야 할 서류 종류가 헷갈릴 때</li>
+            </ul>
+          </div>
+
+          <div class="info-card">
+            <h3>이 사이트의 특징</h3>
+            <ul class="check-bullets">
+              <li>상황별 체크리스트</li>
+              <li>초보자용 발급 가이드</li>
+              <li>인쇄·복사 가능한 정리형 화면</li>
+              <li>관련 문서끼리 내부 링크 연결</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-sm">
+      <div class="container">
+        <span class="eyebrow">인기 상황별 체크리스트</span>
+        <h2 class="section-title">많이 찾는 서류 준비 페이지</h2>
+        <p class="section-desc">
+          급하게 찾는 경우가 많은 대표 상황을 먼저 정리했습니다. 각 페이지에서는 필요한 서류 목록뿐 아니라 발급 전 확인할 점,
+          자주 빠뜨리는 실수, 실제 제출 전에 확인해야 할 내용을 함께 볼 수 있습니다.
+        </p>
+
+        <div class="grid grid-3 mt-24">
+          <article class="card">
+            <h3><a href="/checklist/moving-documents.html">이사 서류 체크리스트</a></h3>
+            <p>전입신고, 확정일자, 계약서 보관, 공과금 정리, 주소 변경까지 이사 전후 서류 준비를 한 번에 정리합니다.</p>
+            <div class="card-meta">
+              <span class="tag">이사</span>
+              <span class="tag">전입신고</span>
+            </div>
+          </article>
+
+          <article class="card">
+            <h3><a href="/checklist/job-application-documents.html">취업 제출 서류 정리</a></h3>
+            <p>입사 전 회사에서 자주 요구하는 주민등록등본, 통장사본, 졸업증명서, 자격증 사본 등을 정리했습니다.</p>
+            <div class="card-meta">
+              <span class="tag">취업</span>
+              <span class="tag">입사 준비</span>
+            </div>
+          </article>
+
+          <article class="card">
+            <h3><a href="/guides/how-to-get-resident-record.html">주민등록등본 발급 가이드</a></h3>
+            <p>온라인과 오프라인 발급 방법, 준비물, 출력본 확인 포인트를 초보자 기준으로 설명합니다.</p>
+            <div class="card-meta">
+              <span class="tag">가이드</span>
+              <span class="tag">발급 방법</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-sm">
+      <div class="container">
+        <span class="eyebrow">왜 단순 목록이 아니라 설명형으로 만들었을까</span>
+        <h2 class="section-title">체크리스트만으로 부족한 부분까지 함께 설명합니다</h2>
+        <div class="grid grid-2 mt-24">
+          <article class="card">
+            <h3>1. 왜 필요한 서류인지 설명</h3>
+            <p>
+              같은 이름의 서류라도 제출 기관에 따라 요구 목적이 다를 수 있습니다.
+              단순히 이름만 적어두면 준비는 했지만 제출이 반려되는 경우가 생기기 때문에,
+              각 페이지에는 서류의 용도와 확인 포인트를 함께 적었습니다.
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>2. 언제 준비해야 하는지 안내</h3>
+            <p>
+              이사 서류는 계약 직후, 취업 서류는 입사 전, 학교 제출 서류는 학사 일정에 맞춰 준비해야 합니다.
+              준비 시점이 중요한 문서는 늦게 발급하면 다시 준비해야 할 수 있어서 일정 기준으로 정리했습니다.
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>3. 어디서 발급하는지 정리</h3>
+            <p>
+              주민센터, 정부24, 학교 행정실, 병원 원무과, 회사 인사팀처럼 발급 경로가 제각각입니다.
+              페이지마다 발급 장소나 발급 주체를 최대한 명확하게 적어 초보자도 헤매지 않게 구성했습니다.
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>4. 자주 하는 실수까지 체크</h3>
+            <p>
+              원본과 사본 구분, 발급일 유효기간, 주민번호 공개 범위, 서명 누락, 인감 또는 직인 누락처럼
+              실제 제출 직전에 문제가 되는 항목을 따로 정리했습니다.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-sm">
+      <div class="container">
+        <span class="eyebrow">자주 찾는 가이드</span>
+        <h2 class="section-title">서류 발급 방법을 같이 보면 준비가 훨씬 쉬워집니다</h2>
+        <div class="grid grid-3 mt-24">
+          <article class="card">
+            <h3><a href="/guides/how-to-get-resident-record.html">주민등록등본 발급 가이드</a></h3>
+            <p>정부24 발급, 주민센터 방문, 출력 전 확인 포인트를 단계별로 안내합니다.</p>
+          </article>
+
+          <article class="card">
+            <h3><a href="/guides/index.html">서류 발급 가이드 전체 보기</a></h3>
+            <p>원본·사본·스캔본 차이, 제출 마감 체크, 자주 틀리는 준비 실수까지 한 번에 볼 수 있습니다.</p>
+          </article>
+
+          <article class="card">
+            <h3><a href="/faq/index.html">자주 묻는 질문</a></h3>
+            <p>유효기간, 대리 발급, 출력본 사용 가능 여부처럼 많이 헷갈리는 질문을 모았습니다.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-sm">
+      <div class="container">
+        <div class="card principles-card">
+          <span class="eyebrow">사이트 운영 원칙</span>
+          <h2 class="mt-0">서류준비도우미는 이런 기준으로 정보를 정리합니다</h2>
+          <ul class="dot-list">
+            <li>광고보다 본문 정보가 먼저 보이도록 설계합니다.</li>
+            <li>"준비 중" 페이지나 내용 없는 껍데기 페이지를 만들지 않습니다.</li>
+            <li>상황별 페이지마다 실제로 도움이 되는 설명 문장을 충분히 넣습니다.</li>
+            <li>초보자도 이해할 수 있도록 어려운 용어는 풀어서 씁니다.</li>
+            <li>링크가 깨지지 않도록 내부 연결 구조를 단순하게 유지합니다.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h3>서류준비도우미</h3>
+          <p>
+            상황별 행정 서류 준비를 더 쉽게 만들기 위한 정보형 웹사이트입니다.
+            이사, 취업, 학교 제출, 출산·육아 등 생활 속 서류 준비 과정을 차근차근 설명합니다.
+          </p>
+        </div>
+
+        <div>
+          <h4>주요 메뉴</h4>
+          <ul>
+            <li><a href="/checklist/index.html">체크리스트</a></li>
+            <li><a href="/guides/index.html">가이드</a></li>
+            <li><a href="/faq/index.html">FAQ</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>정책 및 문의</h4>
+          <ul>
+            <li><a href="/about/index.html">About</a></li>
+            <li><a href="/privacy/index.html">개인정보처리방침</a></li>
+            <li><a href="/terms/index.html">이용약관</a></li>
+            <li><a href="/contact/index.html">문의하기</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        © <span data-year></span> 서류준비도우미. All rights reserved.
+      </div>
+    </div>
+  </footer>
 </body>
 </html>
