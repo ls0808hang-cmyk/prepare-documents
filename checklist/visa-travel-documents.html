@@ -31,102 +31,77 @@
     <section class="page-hero">
       <div class="container">
         <div class="breadcrumb">홈 &gt; 체크리스트 &gt; 비자·해외 제출 서류 체크리스트</div>
-        <h1>비자·해외 제출 서류 체크리스트</h1>
-        <p>
-          해외 제출 서류는 국내 행정 서류보다 더 까다롭게 느껴질 수 있습니다.
-          같은 증명서라도 영문 발급이 필요한지, 번역이 필요한지, 원본과 사본 중 무엇을 요구하는지,
-          제출 일정은 국내 기준이 아닌 해외 접수 일정에 맞춰야 하는지까지 함께 확인해야 하기 때문입니다.
-        </p>
+        <article class="checklist-container">
+          <header class="page-header">
+            <h1>해외 비자 및 출국 준비 서류 가이드</h1>
+            <p class="last-updated">최종 업데이트: 2026년 4월 10일</p>
+            <div class="intro-text">
+              <p>
+                비자 심사는 아주 작은 서류 결함으로도 거절될 수 있어 세심한 준비가 필요합니다.
+                국가별로 요구 조건이 상이하지만, 영문 증명서 발급부터 아포스티유 인증까지 공통적으로 적용되는 핵심 체크리스트를 확인하세요.
+              </p>
+            </div>
+          </header>
+        </article>
       </div>
     </section>
 
     <section class="container content-layout">
       <div>
-        <article class="content-card">
-          <h2>핵심 체크리스트</h2>
-          <div data-checklist>
-            <div class="checklist">
-              <label class="check-item"><input type="checkbox" data-title="여권 유효기간 확인" /><span><strong>여권 유효기간 확인</strong><small>가장 먼저 점검해야 하는 기본 항목입니다.</small></span></label>
-              <label class="check-item"><input type="checkbox" data-title="영문 증명서 필요 여부 확인" /><span><strong>영문 증명서 필요 여부 확인</strong><small>재학·졸업·성적·가족 관련 문서의 영문 여부를 확인합니다.</small></span></label>
-              <label class="check-item"><input type="checkbox" data-title="번역 및 공증 필요 여부 확인" /><span><strong>번역 및 공증 필요 여부 확인</strong><small>일부 제출은 번역본 또는 추가 확인 절차를 요구할 수 있습니다.</small></span></label>
-              <label class="check-item"><input type="checkbox" data-title="사진 규격 및 파일 형식 확인" /><span><strong>사진 규격 및 파일 형식 확인</strong><small>비자나 해외 지원은 사진 조건이 따로 있는 경우가 많습니다.</small></span></label>
-              <label class="check-item"><input type="checkbox" data-title="제출 마감일과 시차 기준 확인" /><span><strong>제출 마감일과 시차 기준 확인</strong><small>국내 시간이 아니라 제출처 현지 시간 기준일 수 있습니다.</small></span></label>
-              <label class="check-item"><input type="checkbox" data-title="원본·사본·스캔본 요구 형식 확인" /><span><strong>원본·사본·스캔본 요구 형식 확인</strong><small>업로드, 원본 우편, 현장 지참 중 무엇인지 확인합니다.</small></span></label>
-              <label class="check-item"><input type="checkbox" data-title="제출용 파일명과 보관용 폴더 정리" /><span><strong>제출용 파일명과 보관용 폴더 정리</strong><small>영문 파일명과 기관별 폴더 구분을 해두면 실수가 줄어듭니다.</small></span></label>
+        <article class="checklist-container">
+          <section class="checklist-section">
+            <h2>1. 신원 확인 및 가족 관계</h2>
+            <ul class="styled-list">
+              <li>
+                <input type="checkbox" id="visa1" />
+                <label for="visa1"><strong>여권 및 여권 사본:</strong> 유효기간이 최소 6개월 이상 남았는지 확인하세요.</label>
+                <p class="description">심사 기간을 고려하여 유효기간이 촉박하다면 미리 갱신하는 것이 안전합니다.</p>
+              </li>
+              <li>
+                <input type="checkbox" id="visa2" />
+                <label for="visa2"><strong>영문 가족관계증명서:</strong> 동반 비자 등에 필수입니다.</label>
+                <p class="description">과거에는 국문 발급 후 번역·공증이 필요했지만, <strong>이제는 대법원 사이트에서 '영문' 메뉴를 선택하면 별도의 번역 비용 없이 무료로 즉시 발급 가능하므로 비용을 절약할 수 있습니다.</strong></p>
+              </li>
+            </ul>
+          </section>
+
+          <section class="checklist-section">
+            <h2>2. 재정 및 범죄 경력 증빙</h2>
+            <ul class="styled-list">
+              <li>
+                <input type="checkbox" id="visa3" />
+                <label for="visa3"><strong>영문 은행 잔고 증명서:</strong> 체류 비용 증빙용입니다.</label>
+                <p class="description">발급 당일에는 해당 계좌의 입출금이 정지되므로 생활비 계좌가 아닌 예비 계좌를 활용하는 것이 좋습니다. <strong>또한, 비자 신청 국가에 따라 '달러($)'가 아닌 현지 통화 표기를 요구할 수도 있으니 미리 확인이 필요합니다.</strong></p>
+              </li>
+              <li>
+                <input type="checkbox" id="visa4" />
+                <label for="visa4"><strong>범죄경력회보서 (영문):</strong> 장기 체류 비자 시 필수 요구됩니다.</label>
+                <p class="description">경찰서 방문 없이 '범죄경력회보서 발급시스템'을 통해 온라인 신청이 가능합니다.</p>
+              </li>
+            </ul>
+
+            <div class="expert-box" style="background: #fff0f0; border-left: 4px solid #dc3545; padding: 15px; margin: 20px 0;">
+              <strong>⚠️ 중요 주의사항:</strong> 비영어권 국가에 제출하는 경우 '아포스티유(Apostille)' 인증이나 대사관 공증이 필수인 경우가 많습니다. 본인의 목적지가 아포스티유 협약국인지 꼭 확인하세요.
             </div>
+          </section>
 
-            <div class="progress-wrap">
-              <div class="progress-label"><span>준비 진행률</span><span data-progress-text>0 / 0 완료</span></div>
-              <div class="progress-bar"><div class="progress-fill" data-progress-fill></div></div>
+          <section class="faq-section">
+            <h2>비자 서류 FAQ</h2>
+            <div class="faq-item">
+              <p><strong>Q: 영문 서류의 영문 이름이 여권과 다르면 어떻게 하나요?</strong></p>
+              <p>A: 비자 심사에서 가장 흔한 거절 사유입니다. 반드시 여권 스펠링과 동일하게 수정하여 재발급받아야 합니다.</p>
             </div>
-
-            <div class="check-actions">
-              <button class="btn btn-primary" type="button" data-copy>체크리스트 복사</button>
-              <button class="btn btn-secondary" type="button" data-reset>초기화</button>
-              <button class="btn btn-secondary" type="button" onclick="window.print()">인쇄하기</button>
-            </div>
-          </div>
-        </article>
-
-        <article class="content-card">
-          <h2>실제 제출 예시</h2>
-          <h3>예시 1. 해외 학교 지원</h3>
-          <p>
-            여권, 영문 성적증명서, 영문 졸업증명서, 파일 업로드 규격, 마감 시차를 함께 확인해야 하는 경우가 많습니다.
-            이때 여권부터 먼저 보고, 그다음 영문 증명서와 마감일을 정리하면 흐름이 잡히기 쉽습니다.
-          </p>
-
-          <h3>예시 2. 비자 신청</h3>
-          <p>
-            사진 규격, 제출 경로, 원본/사본 구분, 현지 시간 기준 마감이 한 번에 얽혀 있을 수 있습니다.
-            이 경우에는 형식과 일정 가이드를 같이 보는 편이 안전합니다.
-          </p>
-        </article>
-
-        <article class="content-card">
-          <h2>자주 반려되거나 다시 준비하는 경우</h2>
-          <ul class="dot-list">
-            <li>국문 서류만 준비하고 영문 필요 여부를 늦게 확인한 경우</li>
-            <li>여권 유효기간을 마지막에 확인한 경우</li>
-            <li>현지 시간 기준 마감이라는 점을 놓친 경우</li>
-            <li>원본·사본·스캔본 요구 형식을 헷갈린 경우</li>
-            <li>영문 파일명 정리를 하지 않아 제출 문서가 뒤섞인 경우</li>
-          </ul>
-        </article>
-
-        <article class="content-card">
-          <h2>어디서 다시 확인하면 좋을까</h2>
-          <ul class="dot-list">
-            <li>해외 학교 또는 기관의 공식 제출 가이드</li>
-            <li>비자 안내 페이지</li>
-            <li>사진 규격 및 업로드 형식 안내</li>
-            <li>국내 증명서 영문 발급 안내</li>
-          </ul>
-
-          <div class="notice">
-            팁: 해외 제출은 서류 수보다 “조건 확인”이 더 중요합니다. 처음엔 느리게 확인해도 맞게 준비하는 편이 훨씬 안전합니다.
-          </div>
-        </article>
-
-        <article class="content-card">
-          <h2>관련 페이지</h2>
-          <ul class="dot-list">
-            <li><a href="/guides/how-to-get-graduation-certificate.html">졸업증명서 발급 가이드</a></li>
-            <li><a href="/guides/how-to-get-transcript.html">성적증명서 발급 가이드</a></li>
-            <li><a href="/guides/deadline-check-guide.html">제출 마감일 체크 가이드</a></li>
-            <li><a href="/guides/how-to-name-document-files.html">제출용 파일명 정리 방법</a></li>
-            <li><a href="/guides/document-validity-period-guide.html">서류 유효기간·최근 발급본 기준 설명</a></li>
-          </ul>
+          </section>
         </article>
       </div>
 
       <aside class="sidebar">
         <div class="card">
-          <h3>이 페이지가 특히 필요한 경우</h3>
+          <h3>관련 페이지</h3>
           <ul class="dot-list">
-            <li>비자 신청을 준비할 때</li>
-            <li>해외 학교나 해외 기관에 서류를 낼 때</li>
-            <li>영문 증명서와 제출 일정을 함께 관리해야 할 때</li>
+            <li><a href="/guides/how-to-get-family-certificate.html">가족관계증명서 발급 가이드</a></li>
+            <li><a href="/guides/deadline-check-guide.html">제출 마감일 체크 가이드</a></li>
+            <li><a href="/contact/index.html">문의하기</a></li>
           </ul>
         </div>
       </aside>
