@@ -698,3 +698,483 @@ td {
 .muted {
   color: var(--muted);
 }
+
+.page-meta {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 0.5rem 0 1.75rem;
+  flex-wrap: wrap;
+}
+
+.badge-updated {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  background: #f0f6ff;
+  color: #1a73e8;
+  border: 1px solid #c5dcff;
+  border-radius: 4px;
+  padding: 0.25rem 0.6rem;
+  font-size: 0.82rem;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.badge-updated::before {
+  content: "\1F550";
+  font-size: 0.78rem;
+}
+
+.badge-category {
+  display: inline-flex;
+  align-items: center;
+  background: #f5f5f5;
+  color: #555;
+  border-radius: 4px;
+  padding: 0.25rem 0.6rem;
+  font-size: 0.82rem;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.badge-readtime {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  color: #888;
+  font-size: 0.82rem;
+  white-space: nowrap;
+}
+
+.badge-readtime::before {
+  content: "\23F1";
+  font-size: 0.78rem;
+}
+/* ============================================================
+   mobile.css — 서류준비도우미 모바일 최적화
+   
+   사용 방법:
+   모든 HTML 파일의 <head> 안에 기존 CSS 다음 줄에 추가하세요.
+   <link rel="stylesheet" href="/mobile.css" />
+   ============================================================ */
+
+
+/* ──────────────────────────────────────────
+   1. 기본 뷰포트 · 박스 모델 설정
+   ────────────────────────────────────────── */
+   *, *::before, *::after {
+    box-sizing: border-box;
+  }
+  
+  /* 가로 스크롤 방지 */
+  html, body {
+    overflow-x: hidden;
+    max-width: 100%;
+  }
+  
+  /* 기본 폰트 크기: 모바일 가독성 기준 */
+  body {
+    font-size: 16px;
+    line-height: 1.7;
+    word-break: keep-all; /* 한국어 단어 중간 줄바꿈 방지 */
+    overflow-wrap: break-word;
+  }
+  
+  
+  /* ──────────────────────────────────────────
+     2. 햄버거 메뉴 버튼 기본 설정
+     (PC에서는 숨김, 모바일에서 표시)
+     ────────────────────────────────────────── */
+  .nav-toggle {
+    display: none; /* PC에서 숨김 */
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    margin-left: auto;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    min-width: 44px;
+    min-height: 44px;
+  }
+  
+  .nav-toggle span {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background: currentColor;
+    border-radius: 2px;
+    transition: all 0.25s ease;
+  }
+  
+  /* 열렸을 때 X 모양 */
+  .nav-toggle.is-open span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+  }
+  .nav-toggle.is-open span:nth-child(2) {
+    opacity: 0;
+  }
+  .nav-toggle.is-open span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+  }
+  
+  
+  /* ──────────────────────────────────────────
+     3. 반응형 분기점
+     ────────────────────────────────────────── */
+  
+  /* ── 태블릿 이하 (768px) ── */
+  @media (max-width: 768px) {
+  
+    /* 본문 최대 너비·여백 */
+    main, .container, .content, article {
+      padding-left: 1rem;
+      padding-right: 1rem;
+      max-width: 100%;
+    }
+  
+    /* ── 네비게이션 ── */
+    header nav {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      padding: 0 1rem;
+    }
+  
+    /* 로고는 왼쪽 고정 */
+    header nav > a:first-child,
+    header nav .logo {
+      flex: 1;
+      font-size: 1rem;
+    }
+  
+    /* 햄버거 버튼 표시 */
+    .nav-toggle {
+      display: flex;
+    }
+  
+    /* 기존 '메뉴' 텍스트 버튼이 있는 경우 스타일 통일 */
+    header nav button,
+    header nav [role="button"] {
+      display: flex;
+      align-items: center;
+      min-width: 44px;
+      min-height: 44px;
+      padding: 0.5rem;
+      background: none;
+      border: none;
+      cursor: pointer;
+      font-size: 0.9rem;
+    }
+  
+    /* 네비 링크 목록: 기본 숨김, 열리면 세로로 표시 */
+    header nav ul,
+    header nav ol,
+    .nav-links {
+      display: none;
+      flex-direction: column;
+      width: 100%;
+      padding: 0.5rem 0 1rem;
+      gap: 0;
+    }
+  
+    header nav ul.is-open,
+    header nav ol.is-open,
+    .nav-links.is-open {
+      display: flex;
+    }
+  
+    header nav ul li,
+    header nav ol li {
+      width: 100%;
+    }
+  
+    header nav ul li a,
+    header nav ol li a {
+      display: block;
+      padding: 0.75rem 0.5rem;
+      min-height: 44px;
+      font-size: 1rem;
+      border-bottom: 1px solid rgba(0,0,0,0.07);
+    }
+  
+  
+    /* ── 타이포그래피 ── */
+    h1 {
+      font-size: 1.5rem;
+      line-height: 1.45;
+      word-break: keep-all;
+    }
+  
+    h2 {
+      font-size: 1.2rem;
+      line-height: 1.5;
+    }
+  
+    h3 {
+      font-size: 1.05rem;
+    }
+  
+    p, li {
+      font-size: 0.97rem;
+      line-height: 1.75;
+    }
+  
+  
+    /* ── 히어로(홈 상단) 섹션 ── */
+    .hero, section:first-of-type {
+      padding: 2rem 1rem;
+      text-align: left;
+    }
+  
+    /* 히어로 버튼 그룹: 세로 쌓기 */
+    .hero-buttons,
+    .cta-buttons,
+    .button-group {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      width: 100%;
+    }
+  
+    .hero-buttons a,
+    .cta-buttons a,
+    .button-group a,
+    a[class*="btn"],
+    a[class*="button"] {
+      display: block;
+      width: 100%;
+      text-align: center;
+      min-height: 48px;
+      line-height: 48px;
+      padding: 0 1rem;
+    }
+  
+  
+    /* ── 카드 그리드: 1열로 변경 ── */
+    .card-grid,
+    .checklist-grid,
+    .guide-grid,
+    .grid,
+    [class*="grid"] {
+      display: block !important;
+      grid-template-columns: 1fr !important;
+      columns: 1 !important;
+    }
+  
+    /* 카드 개별 항목 */
+    .card,
+    .checklist-item,
+    .guide-item,
+    [class*="card"] {
+      width: 100%;
+      margin-bottom: 1rem;
+    }
+  
+    /* H3 링크로 된 카드 항목 (현재 사이트 구조) */
+    h3 a {
+      display: block;
+      line-height: 1.5;
+    }
+  
+    /* 섹션 간격 */
+    section {
+      padding-top: 2rem;
+      padding-bottom: 2rem;
+    }
+  
+  
+    /* ── 테이블 모바일 처리 ── */
+    table {
+      display: block;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      width: 100%;
+      font-size: 0.88rem;
+    }
+  
+  
+    /* ── 터치 영역 확보 (최소 44×44px) ── */
+    a, button, [role="button"], input, select, textarea {
+      min-height: 44px;
+    }
+  
+    /* 인라인 텍스트 링크는 예외 (높이 강제 적용 안 함) */
+    p a, li a {
+      min-height: unset;
+      display: inline;
+    }
+  
+  
+    /* ── FAQ 항목 간격 ── */
+    .faq-item,
+    details {
+      margin-bottom: 1rem;
+    }
+  
+    details summary {
+      padding: 0.75rem 0;
+      min-height: 44px;
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+    }
+  
+  
+    /* ── 브레드크럼 ── */
+    nav[aria-label="breadcrumb"] ol {
+      flex-wrap: wrap;
+      gap: 0.25rem;
+      font-size: 0.85rem;
+    }
+  
+  
+    /* ── 푸터 ── */
+    footer {
+      padding: 1.5rem 1rem;
+      text-align: center;
+    }
+  
+    footer nav ul,
+    footer .footer-links {
+      flex-direction: column;
+      align-items: center;
+      gap: 0.5rem;
+    }
+  
+    footer .footer-columns,
+    footer [class*="grid"],
+    footer [class*="col"] {
+      display: block;
+    }
+  
+    footer [class*="col"] {
+      margin-bottom: 1.5rem;
+    }
+  
+  
+    /* ── About 페이지 운영자 카드 ── */
+    .operator-card {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .operator-icon {
+      margin-bottom: 0.5rem;
+    }
+  
+  
+    /* ── 인쇄·복사 버튼 영역 ── */
+    .action-buttons,
+    .print-buttons,
+    [class*="action"] {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+  
+    .action-buttons button,
+    .print-buttons button {
+      width: 100%;
+      min-height: 48px;
+    }
+  
+  }
+  
+  
+  /* ── 소형 모바일 (390px 이하: iPhone SE 등) ── */
+  @media (max-width: 390px) {
+  
+    body {
+      font-size: 15px;
+    }
+  
+    h1 {
+      font-size: 1.3rem;
+    }
+  
+    h2 {
+      font-size: 1.1rem;
+    }
+  
+    main, .container {
+      padding-left: 0.75rem;
+      padding-right: 0.75rem;
+    }
+  
+  }
+  
+  
+  /* ──────────────────────────────────────────
+     4. 햄버거 메뉴 JavaScript
+     
+     사용 방법:
+     각 HTML 파일의 </body> 바로 위에 아래 <script> 블록을 붙여넣으세요.
+     (또는 공통 JS 파일로 분리해서 사용하세요)
+     ────────────────────────────────────────── */
+  
+  /*
+  <script>
+  (function () {
+    // 헤더 안의 nav 찾기
+    var nav = document.querySelector('header nav');
+    if (!nav) return;
+  
+    // 기존 '메뉴' 텍스트 버튼이 있으면 햄버거로 교체
+    var existingBtn = nav.querySelector('button, [role="button"]');
+  
+    var toggle;
+    if (existingBtn) {
+      toggle = existingBtn;
+      toggle.classList.add('nav-toggle');
+      toggle.innerHTML =
+        '<span></span><span></span><span></span>';
+      toggle.setAttribute('aria-label', '메뉴 열기');
+      toggle.setAttribute('aria-expanded', 'false');
+    } else {
+      // 버튼이 없으면 새로 생성
+      toggle = document.createElement('button');
+      toggle.className = 'nav-toggle';
+      toggle.setAttribute('aria-label', '메뉴 열기');
+      toggle.setAttribute('aria-expanded', 'false');
+      toggle.innerHTML =
+        '<span></span><span></span><span></span>';
+      nav.appendChild(toggle);
+    }
+  
+    // 링크 목록 찾기 (ul 또는 ol)
+    var navList = nav.querySelector('ul, ol');
+    if (!navList) return;
+  
+    toggle.addEventListener('click', function () {
+      var isOpen = navList.classList.toggle('is-open');
+      toggle.classList.toggle('is-open', isOpen);
+      toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+      toggle.setAttribute('aria-label', isOpen ? '메뉴 닫기' : '메뉴 열기');
+    });
+  
+    // 메뉴 외부 클릭 시 닫기
+    document.addEventListener('click', function (e) {
+      if (!nav.contains(e.target)) {
+        navList.classList.remove('is-open');
+        toggle.classList.remove('is-open');
+        toggle.setAttribute('aria-expanded', 'false');
+        toggle.setAttribute('aria-label', '메뉴 열기');
+      }
+    });
+  
+    // 링크 클릭 시 메뉴 닫기
+    navList.querySelectorAll('a').forEach(function (a) {
+      a.addEventListener('click', function () {
+        navList.classList.remove('is-open');
+        toggle.classList.remove('is-open');
+        toggle.setAttribute('aria-expanded', 'false');
+      });
+    });
+  })();
+  </script>
+  */
+  
